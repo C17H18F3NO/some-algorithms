@@ -1,4 +1,6 @@
 # some-algorithms
+
+***二分查找***
 def binary_search(list, item):
     left = 0
     right = len(list)-1
@@ -21,7 +23,7 @@ if __name__ == '__main__':
 
 ---------------------------------------------------------------------------------------------------------
 
-
+***排序***
 def findSmallest(arr):
     smallest = arr[0]
     smallest_index = 0
@@ -38,3 +40,16 @@ def selectionSort(arr):
         newArr.append(arr.pop(smallest))
     return newArr
 print(selectionSort([12, 1, 2, 34, 5]))
+
+-----------------------------------------------------------------------------------------------------------
+
+***倒计时***
+i = input("input:")
+i = int(i)
+def countdown(i):
+    print(i)
+    if i <= 0:
+        return
+    else:
+        countdown(i - 1)
+countdown(i)
