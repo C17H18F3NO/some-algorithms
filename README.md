@@ -53,3 +53,17 @@ def countdown(i):
     else:
         countdown(i - 1)
 countdown(i)
+
+------------------------------------------------------------------------------------------------------------
+
+***咳咳***
+def word():
+    print("不能")
+    word2()
+    print("切记")
+    word3()
+def word2():
+    print("打游戏")
+def word3():
+    print("控制住你自己")
+word()
