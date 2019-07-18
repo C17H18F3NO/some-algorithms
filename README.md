@@ -67,3 +67,15 @@ def word2():
 def word3():
     print("控制住你自己")
 word()
+
+-----------------------------------------------------------------------------------------------------------
+
+***阶乘***
+def fact(x):
+    if x == 1:
+        return 1
+    else:
+        return x * fact(x - 1)
+x = input("input:")
+x = int(x)
+print(fact(x))
