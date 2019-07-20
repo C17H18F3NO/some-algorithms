@@ -83,3 +83,16 @@ print(fact(x))
 ------------------------------------------------------------------------------------------------------------
 
 ***快速排序***
+def quicksort(array):
+    if len(array) < 2:
+        # 为空或者只包含一个元素的数组是有序的
+        return array
+    else:
+        # 选择基标准
+        pivot = array[0]
+        # 由所有小于等于基标准的元素组成的子数组
+        less = [i for i in array[1:] if i <= pivot]
+        # 由所有大于基标准的元素组成的子数组
+        greater = [i for i in array[1:] if i > pivot]
+        return quicksort(less) + [pivot] + quicksort(greater)
+print(quicksort([9, 5, 12, 3, 4, 25, 9, 45]))
