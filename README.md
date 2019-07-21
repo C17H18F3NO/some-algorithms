@@ -1,16 +1,20 @@
 # some-algorithms
+--------------------------------------------------------------------------------------------------------
 
 ***二分查找***
 def binary_search(list, item):
     left = 0
     right = len(list)-1
     while left <= right:
+        # 向下取整
         mid = (left + right) //  2
         guess = list[mid]
         if guess == item:
             return mid
+        # 大了 就往左段查找
         if guess > item:
             right = mid - 1
+        # 小了 就往右段查找
         else:
             left = mid + 1
     return None
