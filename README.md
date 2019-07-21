@@ -108,3 +108,23 @@ print(quicksort([9, 5, 12, 3, 4, 25, 9, 45]))
 
 ***广度优先搜索***
 
+------------------------------------------------------------------------------------------------------------
+
+***第n个斐波那契数列的数，（兔子序列，形如：0,1，1，2，3，5，8，13，21，34，55......）***
+def fibonacci_sequence(n):
+    # 第零个为0
+    if n == 0:
+        return 0
+    # 第一个和第二个为1
+    elif  n == 1 or n == 2:
+        return 1
+    # 第二个以后的数为前两个之和
+    elif n >= 2:
+        return fibonacci_sequence(n - 1) + fibonacci_sequence(n - 2)
+    else:
+        return -1
+print(fibonacci_sequence(25))
+
+
+
+
