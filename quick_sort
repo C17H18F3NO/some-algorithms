@@ -1,5 +1,5 @@
 ***快速排序***
-def quicksort(array):
+def quick_sort(array):
     if len(array) < 2:
         # 为空或者只包含一个元素的数组是有序的
         return array
@@ -10,6 +10,9 @@ def quicksort(array):
         less = [i for i in array[1:] if i <= pivot]
         # 由所有大于基标准的元素组成的子数组
         greater = [i for i in array[1:] if i > pivot]
-        return quicksort(less) + [pivot] + quicksort(greater)
-print(quicksort([9, 5, 12, 3, 4, 25, 9, 45]))
+        return quick_sort(less) + [pivot] + quick_sort(greater)
+
+    
+print(quick_sort([9, 5, 12, 3, 4, 25, 9, 45]))
+
 
