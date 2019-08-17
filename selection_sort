@@ -1,4 +1,4 @@
-***从小到大排序***
+# ** *从小到大排序 ** *
 def find_smallest(arr):
     smallest = arr[0]
     smallest_index = 0
@@ -7,12 +7,16 @@ def find_smallest(arr):
             smallest = arr[i]
             smallest_index = i
     return smallest_index
-    
-***选择排序***
+
+
+# ** *选择排序 ** *
 def selection_sort(arr):
-    newArr = []
+    new_arr = []
     for i in range(len(arr)):
-        smallest = findSmallest(arr)
-        newArr.append(arr.pop(smallest))
-    return newArr
-print(selectionSort([12, 1, 2, 34, 5]))
+        smallest = find_smallest(arr)
+        new_arr.append(arr.pop(smallest))
+    return new_arr
+
+
+print(selection_sort([12, 1, 2, 34, 5]))
+
