@@ -4,7 +4,7 @@ def binary_search(list, item):
     right = len(list)-1
     while left <= right:
         # 向下取整
-        mid = (left + right) //  2
+        mid = (left + right) // 2
         guess = list[mid]
         if guess == item:
             return mid
@@ -15,6 +15,8 @@ def binary_search(list, item):
         else:
             left = mid + 1
     return None
+    
+    
 if __name__ == '__main__':
     my_list = [1,2,3,4,5,6]
     print(binary_search(my_list, 3))
